@@ -1,0 +1,80 @@
+name:                haskell-book
+version:             0.1.0.0
+license:             BSD3
+author:              "Greg Wiley"
+maintainer:          "gwiley@cj.com"
+copyright:           "shrug"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+synopsis:   Working through Haskell from First Principles with the team
+category:   CJ
+
+description: See <http://gitlab.cj.com/gwiley/operations-backend>
+
+dependencies:
+  - base
+  - aeson
+  - amazonka
+  - amazonka-core
+  - amazonka-s3
+  - amazonka-sqs
+  - amazonka-sts
+  - bytestring
+  - freer-simple
+  - lens
+  - text
+  - transformers
+  - vector
+
+library:
+  source-dirs: src
+  dependencies:
+
+ghc-options:
+  - -Wall
+
+tests:
+  library-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-book
+    - tasty
+    - tasty-hspec
+    - tasty-hunit
+    - hspec
+
+
+default-extensions:
+  - ConstraintKinds
+  - DataKinds
+  - DefaultSignatures
+  - DeriveFunctor
+  - DeriveGeneric
+  - ExistentialQuantification
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - MonoLocalBinds
+  - GeneralizedNewtypeDeriving
+  - KindSignatures
+  - LambdaCase
+  - MultiParamTypeClasses
+  - NamedFieldPuns
+  - OverloadedStrings
+  - RankNTypes
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TupleSections
+  - TypeApplications
+  - TypeOperators
+  - TypeFamilies
+

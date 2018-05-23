@@ -1,0 +1,10 @@
+resolver: lts-10.10
+allow-newer: true
+
+packages:
+- .
+
+extra-deps:
+- git: git@github.com:abbradar/hdbc-odbc
+  commit: 79ffd1f5060d2c8b5cbdfd4eba8ae6414372d6b7
+
