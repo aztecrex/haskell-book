@@ -51,5 +51,21 @@ f' x = x / (2 + 9)
 checkparen3 = "Should not be the same, are they? " ++ show (f 3 == f' 3) ++ ". Good."
 
 
+-- learn.hs
 
+x = 10 * 5 + y
+
+myResult = x * 5
+
+y = 10
+
+{- heal the sick
+-}
+area x = 3.14 * (x * x) -- remove space after point
+
+double x = x * 2 -- bind the parameter
+
+x' = 7
+y' = 10 -- remove indentation
+g = x + y
 
