@@ -69,3 +69,70 @@ x' = 7
 y' = 10 -- remove indentation
 g = x + y
 
+{- head code -}
+
+--1. 5
+--2. 25
+--3. 25
+--4. 1003
+
+{-- rewrite with where --}
+
+xx = x * 3 + y
+      where x = 3
+            y = 1000
+
+yy = x * 5
+      where y = 10
+            x = 10 * 5 + y
+
+zz = z / x + y
+      where x = 7
+            y = negate x
+            z = y * 10
+
+
+{- chapter excercises -}
+
+aa = 2 + (2 * 3) - 1
+bb = 10 ^ (1 + 1)
+cc = (2 ^ 2) * (4 ^ 5) + 1
+
+{- equivalent expressions -}
+
+--1 yes
+dd = 1 + 1 == 2
+
+--2 yes
+ee = 10 ^ 2 == 10 + 9 * 10
+
+--3 no
+ff = not (400 - 37 == (-) 37 400)
+
+--4 no, can't even compare without conversion
+
+
+--5 no
+
+hh = not (2 * 5 + 18 == 2 * (5 + 18))
+
+
+{- more fun with functions -}
+
+
+z'' = 7
+y'' = z'' + 8
+x'' = y'' ^ 2
+waxOn = x'' * 5
+
+--1. 10 + waxOn == 1135
+--   (+10) waxOn = 1135
+--   (-) 15 waxOn = -1110
+
+waxOn''' = x''' * 5
+   where x''' = y''' ^ 2
+         y''' = z''' + 8
+         z''' = 7
+
+waxOff x = triple x
+
