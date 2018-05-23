@@ -34,7 +34,7 @@ library:
   dependencies:
 
 ghc-options:
-  - -Wall
+  # - -Wall
 
 tests:
   library-test:
